@@ -15,6 +15,6 @@ toggleBtn.addEventListener("click", () => {
 	root.setAttribute("data-theme", theme)
 	localStorage.setItem("theme", theme)
 
-	toggleBtn.className = "icon-light-mode"
-	if (theme === "dark") toggleBtn.className = "icon-dark-mode"
+	toggleBtn.className = "icon-dark-mode"
+	if (theme === "dark") toggleBtn.className = "icon-light-mode"
 })

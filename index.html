@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,37 +8,60 @@
 		<script type="module" src="./index.js"></script>
 		<script type="module" src="./theme.js"></script>
 
+		<meta name="description" content="Descubra a forma mais barata de ficar bêbado mais rápido." />
+		<meta name="theme-color" content="#b6403c" />
+
+		<meta property="og:title" content="AlcCalc" />
+		<meta property="og:description" content="Descubra a forma mais barata de ficar bêbado mais rápido." />
+		<meta property="og:image" content="https://alc-calc.vercel.app/banner.png" />
+		<meta property="og:url" content="https://alc-calc.vercel.app/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="pt_BR" />
+		<meta property="og:site_name" content="AlcCalc" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="AlcCalc" />
+		<meta name="twitter:description" content="Descubra a forma mais barata de ficar bêbado mais rápido." />
+		<meta name="twitter:image" content="https://alc-calc.vercel.app/banner.png" />
+
+		<link rel="icon" href="/favicon.ico" />
+
 		<title>AlcCalc</title>
 	</head>
 	<body>
-		<i id="theme-toggle" class="icon-dark-mode"></i>
+		<button type="button" id="theme-toggle" class="icon-dark-mode" aria-label="Alternar tema"></button>
+
 		<header>
 			<h1>AlcCalc</h1>
 			<h2>Descubra a forma mais barata de <strong>ficar bêbado mais rápido</strong>.</h2>
 		</header>
 
 		<main>
-			<form>
-				<input required type="text" id="inputName" placeholder="Nome" />
-				<input required type="number" step="0.01" id="inputPrice" placeholder="Preço (R$)" />
+			<form aria-label="Adicionar bebida">
+				<input required type="text" id="inputName" placeholder="Nome" aria-label="Nome da bebida" />
+				<input required type="number" step="0.01" min="0" id="inputPrice" placeholder="Preço (R$)" aria-label="Preço da bebida em reais" />
+
 				<div>
-					<input required type="number" id="inputQuantity" placeholder="Quantidade" />
-					<select id="inputUnit">
+					<input required type="number" min="0" step="any" id="inputQuantity" placeholder="Quantidade" aria-label="Quantidade da bebida" />
+					<select id="inputUnit" aria-label="Unidade de medida da quantidade">
 						<option value="liters">L</option>
 						<option value="milliliters">mL</option>
 					</select>
 				</div>
-				<input required type="number" step="0.1" id="inputAbv" placeholder="ABV (%)" />
+
+				<input required type="number" min="0" max="100" step="0.1" id="inputAbv" placeholder="ABV (%)" aria-label="Teor alcoólico da bebida em porcentagem" />
 				<button type="submit">Adicionar</button>
 			</form>
 
-			<table>
+			<table aria-label="Comparação de bebidas">
 				<thead>
-					<th>Nome</th>
-					<th id="price">Preço</th>
-					<th id="quantity">Quantidade</th>
-					<th id="abv">ABV</th>
-					<th>mL/R$</th>
+					<tr>
+						<th scope="col">Nome</th>
+						<th scope="col" id="price">Preço</th>
+						<th scope="col" id="quantity">Quantidade</th>
+						<th scope="col" id="abv">ABV</th>
+						<th scope="col">mL/R$</th>
+					</tr>
 				</thead>
 				<tbody id="tableBody"></tbody>
 			</table>
