@@ -8,7 +8,7 @@ O AlcCalc compara bebidas alcoólicas pelo custo-benefício: você informa nome,
 
 ## Versões
 
-- **Web**: https://alccalc.vercel.app (rodando `/www` em Vercel)
+- **Web**: https://alc-calc.vercel.app (rodando `/www` em Vercel)
 - **Android**: APK nativo via Capacitor
 
 ## Funcionalidades
@@ -63,16 +63,6 @@ npx cap open android
 ```
 
 No Android Studio, hit **Run** (▶️) para buildar e rodar no emulator/phone.
-
-### Editar código
-
-Edite HTML/CSS/JS em `www/` normalmente, depois:
-
-```bash
-npx cap sync
-```
-
-Rebuilda no Android Studio e reinstala.
 
 ### Deploy web (Vercel)
 
