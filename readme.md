@@ -4,9 +4,17 @@ Descubra a forma mais barata de ficar bêbado mais rápido.
 
 O AlcCalc compara bebidas alcoólicas pelo custo-benefício: você informa nome, preço, quantidade e teor alcoólico (ABV), e o app calcula quantos mL de álcool puro você leva por real gasto — ordenando tudo do mais em conta pro mais caro.
 
+(esse readme é ia mas eu juro que fiz sem)
+
+## Versões
+
+- **Web**: https://alccalc.vercel.app (rodando `/www` em Vercel)
+- **Android**: APK nativo via Capacitor
+
 ## Funcionalidades
 
 - 📱 App nativo Android (construído com Capacitor)
+- 🌐 Versão web em Vercel
 - 🍷 Cadastro de bebidas com nome, preço, quantidade (L ou mL) e ABV
 - 📊 Cálculo automático de mL de álcool por real (mL/R$)
 - 📈 Ordenação automática da mais barata pra mais cara
@@ -28,11 +36,11 @@ O AlcCalc compara bebidas alcoólicas pelo custo-benefício: você informa nome,
 - **Frontend**: HTML, CSS, JavaScript vanilla
 - **Mobile**: Android nativo via [Capacitor](https://capacitorjs.com/)
 - **Build**: Gradle + Android SDK
+- **Deploy Web**: Vercel
 
 ### Como compilar
 
 Pré-requisitos:
-
 - Node.js
 - Android Studio (com SDK/emulator)
 - JDK 17+
@@ -66,6 +74,16 @@ npx cap sync
 
 Rebuilda no Android Studio e reinstala.
 
+### Deploy web (Vercel)
+
+O `/www` é automaticamente deployado em Vercel quando você faz push pra `main`.
+
+```bash
+git push origin main
+```
+
+Vercel rebuilda e publica em https://alccalc.vercel.app
+
 ### Gerar Release APK
 
 Já com signing key configurado:
@@ -78,17 +96,3 @@ cd android
 APK sai em `android/app/build/outputs/apk/release/app-release.apk`.
 
 ## Estrutura
-
-.
-├── www/
-│ ├── index.html
-│ ├── index.css
-│ ├── index.js
-│ ├── theme.js
-│ ├── icons/
-│ └── banner.jpg
-├── android/
-│ └── [projeto Android nativo Capacitor]
-├── capacitor.config.json
-├── package.json
-└── README.md
