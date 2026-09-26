@@ -1,0 +1,26 @@
+{
+	"name": "alccalc",
+	"version": "1.0.0",
+	"description": "Descubra a forma mais barata de ficar bêbado mais rápido.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hvjustus/alcCalc.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "UNLICENSED",
+	"type": "commonjs",
+	"bugs": {
+		"url": "https://github.com/hvjustus/alcCalc/issues"
+	},
+	"homepage": "https://github.com/hvjustus/alcCalc#readme",
+	"dependencies": {
+		"@capacitor/android": "^8.5.2",
+		"@capacitor/cli": "^8.5.2",
+		"@capacitor/core": "^8.5.2"
+	}
+}
